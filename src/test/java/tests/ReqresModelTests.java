@@ -28,4 +28,32 @@ public class ReqresModelTests {
         assertThat(user.getId(), notNullValue());
         assertThat(user.getEmail(), containsString("@reqres.in"));
     }
+    @Test
+    void updateUserWithPutTest() {
+        UserResponse response = steps.updateUserPut(2, "morpheus", "zion resident");
+
+        assertThat(response.getName(), equalTo("morpheus"));
+        assertThat(response.getJob(), equalTo("zion resident"));
+        assertThat(response.getUpdatedAt(), notNullValue());
+    }
+
+    @Test
+    void updateUserWithPatchTest() {
+        UserResponse response = steps.updateUserPatch(2, "zion resident");
+
+        assertThat(response.getJob(), equalTo("zion resident"));
+        assertThat(response.getUpdatedAt(), notNullValue());
+    }
+
+    @Test
+    void deleteUserTest() {
+        int statusCode = steps.deleteUser(2);
+        assertThat(statusCode, equalTo(204));
+    }
+
+    @Test
+    void getSingleUserNotFoundTest() {
+        int statusCode = steps.getSingleUserNotFound(23);
+        assertThat(statusCode, equalTo(404));
+    }
 }
