@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://reqres.in/" target="_blank">
-    <img src="images/screens/reqres_in_logo.png" width="200" alt="LoyLabs Logo">
+    <img src="images/screens/reqres_in_logo.png" width="200" alt="Reqres.in Logo">
   </a>
 </p>
 
@@ -88,7 +88,7 @@
 - ✅ Получение данных конкретного пользователя
 - ✅ Создание нового пользователя
 - ✅ Частичное обновление пользователя
-- ✅ Полное обновление пользователя 
+- ✅ Полное обновление пользователя
 - ✅ Удаление пользователя
 ---
 
@@ -128,4 +128,3 @@ clean ${TASK}
 <p align="center">
 <img src="images/screens/TelegramReport.png" width="600" alt="Allure">
 </p>
-
