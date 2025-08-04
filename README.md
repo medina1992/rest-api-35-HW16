@@ -1,4 +1,4 @@
-# Автоматизация тестовых сценариев для API сайта Reqres.in [Reqres.in](https://reqres.in/)
+# Автоматизация тестовых сценариев для API сайта [Reqres.in](https://reqres.in/)
 <img  src="images/screens/reqresin.jpg">
 
 
