@@ -15,7 +15,7 @@ import static io.restassured.http.ContentType.JSON;
 public class UsersSpecs extends BaseTest {
 
     public static RequestSpecification crudUserRequestSpec = with()
-            .filter(CustomAllureListener.withCustomTemplates())
+            .filter(withCustomTemplates())
             .log().all()
             .header("x-api-key", API_KEY)
             .contentType(JSON);

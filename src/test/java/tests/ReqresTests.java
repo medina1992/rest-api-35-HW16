@@ -59,7 +59,7 @@ public class ReqresTests extends BaseTest {
     @DisplayName("Получение списка пользователей")
     void usersListTest() {
         ListUsersResponseModel response = step("Получить список пользователей", () ->
-                given()
+                given(crudUserRequestSpec)
                         .queryParam("page", 2)
                         .when()
                         .get(USERS_PATH)
@@ -82,7 +82,7 @@ public class ReqresTests extends BaseTest {
     @DisplayName("Получение данных конкретного пользователя")
     void singleUserTest() {
         SingleUserResponseModel response = step("Получаем пользователя по ID", () ->
-                given()
+                given(crudUserRequestSpec)
                         .pathParam("id", 2)
                         .when()
                         .get(USER_BY_ID_PATH)
