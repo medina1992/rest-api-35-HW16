@@ -102,7 +102,7 @@ public class ReqresTests extends BaseTest {
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Частичное обновление пользователя (PATCH)")
+    @DisplayName("Частичное обновление пользователя")
     void updateUserPatchMethodTest() {
         UserRequestModel request = step("Подготовока данных для запроса", () ->
                 UserRequestModel.builder()
@@ -129,7 +129,7 @@ public class ReqresTests extends BaseTest {
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Полное обновление пользователя (PUT)")
+    @DisplayName("Полное обновление пользователя")
     void updateUserPutMethodTest() {
         UserRequestModel request = step("Подготовока данных для запроса", () ->
                 UserRequestModel.builder()
@@ -156,7 +156,7 @@ public class ReqresTests extends BaseTest {
 
     @Test
     @Severity(SeverityLevel.BLOCKER)
-    @DisplayName("Удаление пользователя")
+    @DisplayName("Удаление пользователя" )
     void deleteUserTest() {
         step("Удаляем пользователя", () ->
                 given(crudUserRequestSpec)
