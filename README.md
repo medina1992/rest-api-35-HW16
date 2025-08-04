@@ -1,10 +1,6 @@
-<p align="center">
-  <a href="https://reqres.in/" target="_blank">
-    <img src="images/screens/reqres_in_logo.png" width="200" alt="Reqres.in Logo">
-  </a>
-</p>
-
 # Автоматизация тестовых сценариев для API сайта Reqres.in [Reqres.in](https://reqres.in/)
+<img  src="images/screens/reqresin.jpg">
+
 
 ## Содержание
 - [Технологический стек](#-технологический-стек)
