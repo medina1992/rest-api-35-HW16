@@ -12,21 +12,41 @@ repositories {
     mavenCentral()
 }
 
+def restAssuredVersion = "5.4.0",
+    allureVersion = "2.21.0",
+    junitVersion = "5.10.1",
+    jacksonVersion = "2.16.1"
+
+allure {
+    report {
+        version.set(allureVersion)
+    }
+    adapter {
+        aspectjWeaver.set(true)
+        frameworks {
+            junit5 {
+                adapterVersion.set(allureVersion)
+            }
+        }
+    }
+}
 
 
 dependencies {
+    testImplementation(
+            "io.rest-assured:rest-assured:$restAssuredVersion",
+            "io.rest-assured:json-schema-validator:$restAssuredVersion",
+            "io.qameta.allure:allure-rest-assured:$allureVersion",
+            "org.junit.jupiter:junit-jupiter:$junitVersion",
+            'org.slf4j:slf4j-simple:2.0.9',
+            'org.assertj:assertj-core:3.24.2',
 
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.3'
-    testImplementation 'io.rest-assured:rest-assured:5.3.0'
-    testImplementation 'io.qameta.allure:allure-rest-assured:2.24.0'
-    testImplementation 'io.qameta.allure:allure-junit5:2.24.0'
-    compileOnly 'org.projectlombok:lombok:1.18.30'
-    annotationProcessor 'org.projectlombok:lombok:1.18.30'
-    testImplementation 'org.assertj:assertj-core:3.24.2'
-    testImplementation 'com.fasterxml.jackson.core:jackson-databind:2.15.3'
-    implementation 'org.slf4j:slf4j-simple:2.0.9'
+            "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion",
+            "com.fasterxml.jackson.core:jackson-annotations:$jacksonVersion",
+            "com.fasterxml.jackson.core:jackson-core:$jacksonVersion",
+            "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:$jacksonVersion"
+    )
 }
-
 
 java {
     sourceCompatibility = JavaVersion.VERSION_17
@@ -46,5 +66,10 @@ tasks.withType(Test) {
             events "started", "skipped", "failed", "standard_error", "standard_out"
             exceptionFormat "short"
         }
+    }
+}
+task all_api_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("all_api")
     }
 }
