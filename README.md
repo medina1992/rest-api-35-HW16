@@ -88,7 +88,7 @@
 - ✅ Удаление пользователя
 ---
 
-## [<img src="images/logo/Jenkins.svg" width="40" height="40" alt="Jenkins"> Запуск тестов в Jenkins](https://jenkins.autotests.cloud/job/035-Azkeww-hw16/)
+## [<img src="images/logo/Jenkins.svg" width="40" height="40" alt="Jenkins"> Запуск тестов в Jenkins](https://jenkins.autotests.cloud/job/api-test/9/)
 <img src="images/screens/Jenkins.png" width="800" alt="Allure">
 
 ### Локальный запуск
@@ -105,7 +105,7 @@ clean ${TASK}
 
 
 
-## [<img src="images/logo/Allure.svg" width="40" height="40" alt="Allure"> Allure-отчет](https://jenkins.autotests.cloud/job/035-Azkeww-hw16/4/allure/)
+## [<img src="images/logo/Allure.svg" width="40" height="40" alt="Allure"> Allure-отчет](https://jenkins.autotests.cloud/job/api-test/9/allure/)
 
 ### Главная страница Allure-отчета
 <img src="images/screens/AllureReport.png" width="800" alt="Allure">
